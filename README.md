@@ -13,7 +13,7 @@ Gathers the following information on each film:
 6. Language	
 7. Description
 
-Unfortunately, it does not acquire the screening dates/times.  This turned out to be a java script widget, so that would have tto be done differently.
+Unfortunately, it does not acquire the screening dates/times.  This turned out to be a java script widget, so that would have to be done differently (e.g. with Selenium).
 
 Typical operation:
 
