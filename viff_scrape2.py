@@ -30,8 +30,6 @@ start_page_url = "https://www.viff.org/Online/default.asp?" \
                  "WScontent::loadArticle::" \
                  "article_id=D5FA11B0-61FD-4217-AAF7-1FC44D897DA1"
 
-start_page_parse_result = urlparse(start_page_url)
-
 print("Opening Viff film list web-page...")
 # Open webpage in driver
 driver.get(start_page_url)
@@ -46,6 +44,8 @@ film_page_links = [
     for el in film_link_elements
 ]
 print("Found links for %d film pages." % len(film_page_links))
+
+start_page_parse_result = urlparse(start_page_url)
 
 def convert_link_to_url(link, scheme=start_page_parse_result.scheme,
                         netloc=start_page_parse_result.netloc,
@@ -64,13 +64,6 @@ def convert_link_to_url(link, scheme=start_page_parse_result.scheme,
         parse_result = parse_result._replace(path=path)
 
     return parse_result.geturl()
-
-def get_page_lxml_tree(url):
-    """Request page from url and convert contents into lxml tree"""
-
-    page = requests.get(url)
-
-    return html.fromstring(page.content)
 
 def get_film_details(driver, max_screenings=5):
     """Reads film information from Selenium web-driver."""
