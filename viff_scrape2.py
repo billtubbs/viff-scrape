@@ -7,7 +7,6 @@ import numpy as np
 import requests
 import pickle
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 try:
     # For Python 3
