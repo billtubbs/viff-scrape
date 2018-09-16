@@ -1,6 +1,6 @@
 # viff-scrape
 
-Ywo python scripts to collect information on the current films listed on the Vancouver International Film Festival's website (www.viff.org) and save them as an excel spreadhseet.
+Two python scripts to collect information on the current films listed on the Vancouver International Film Festival's website (www.viff.org) and save them as an excel spreadhseet.
 
 * [viff_scrape.py](viff_scrape.py) - uses lxml but does not acquire film screening times
 * [viff_scrape2.py](viff_scrape2.py) - acquires film screening times and venue information using [Selenium](https://selenium-python.readthedocs.io) web driver.
