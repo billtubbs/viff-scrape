@@ -6,15 +6,17 @@ Two python scripts to collect information on the current films listed on the Van
 * [viff_scrape2.py](viff_scrape2.py) - acquires film screening times and venue information using [Selenium](https://selenium-python.readthedocs.io) web driver.
 
 Both scripts gathers the following information on each film:
-1. Title	
-2. Running Time	
-3. Year	
-4. Director	
-5. Country of Origin	
-6. Language	
+
+1. Title
+2. Running Time
+3. Year
+4. Director
+5. Country of Origin
+6. Language
 7. Description
 
-viff_scrape2.py also captures:
+The second script also captures:
+
 8. Screening date 1
 9. Screening venue 1
 10. Screening date 2
