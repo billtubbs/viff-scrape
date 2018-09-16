@@ -14,6 +14,13 @@ Both scripts gathers the following information on each film:
 6. Language	
 7. Description
 
+viff_scrape2.py also captures:
+8. Screening date 1
+9. Screening venue 1
+10. Screening date 2
+11. Screening venue 2
+12. ...etc.
+
 The reason the first script does not capture the screening times is that they are produced with a java script widget.
 
 Typical operation:
