@@ -1,19 +1,24 @@
-# Script to scrape film information from the
-# Vancouver International Film Festival (VIFF)
-# website
+# Python script to scrape film information from the
+# Vancouver International Film Festival (VIFF) website
+# using lxml
 
 import pandas as pd
 import numpy as np
 import requests
 import pickle
 from lxml import html
-from urllib.parse import urlparse
+
+try:
+    # For Python 3
+    from urllib.parse import urlparse
+except ImportError:
+    # For Python 2
+    from urlparse import urlparse
 
 
 print("\n -------------- viff_scrape.py --------------\n")
 
 print("Scrape information on this year's films from 'https://www.viff.org'")
-
 year = pd.datetime.now().date().year
 
 # build the lxml tree from the chosen website
@@ -35,8 +40,8 @@ tree = html.fromstring(page.text)
 # Now extract the information we want
 
 # Get a list of URLs to the VIFF pages of each film
-#film_page_links = tree.xpath('/html/body/div/div/div/div/div/div/div[@class="article-container main-article-body"]/div/div/div/a/@href')
-film_elements = tree.xpath('/html/body/div/div/div/div/div/div/div[@class="article-container main-article-body"]/div/div/div/a')
+film_elements = tree.xpath('/html/body//div[@class="article-' \
+                           'container main-article-body"]//div/a')
 film_page_links = {
     el.text.strip(): el.attrib['href'] for el in film_elements
 }
