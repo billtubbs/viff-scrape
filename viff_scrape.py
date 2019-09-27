@@ -27,10 +27,9 @@ year = pd.datetime.now().date().year
 
 # Enter the base URL where the A-Z list of films is here (from
 # the viff.org home page find the 'Search by Title' option):
-start_page = "https://www.viff.org/Online/default.asp?" \
-             "doWork::WScontent::loadArticle=Load&BOparam::" \
-             "WScontent::loadArticle::" \
-             "article_id=D5FA11B0-61FD-4217-AAF7-1FC44D897DA1"
+start_page = "https://viff.org/Online/default.asp?BOparam::"\
+             "WScontent::loadArticle::permalink=2019-filmindex&BOparam::"\
+             "WScontent::loadArticle::context_id="
 
 start_page_parse_result = urlparse(start_page)
 
